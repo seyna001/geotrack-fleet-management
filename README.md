@@ -1,7 +1,7 @@
 # geotrack-fleet-management
 GeoTrack - Système de suivi de flotte de véhicules
 
-
+Lien du projet Jira : https://dios84.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog
 
 
 ## Organisation du dépôt
