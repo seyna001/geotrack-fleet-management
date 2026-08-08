@@ -1,0 +1,134 @@
+Objectif du Sprint
+
+L'objectif du Sprint 2 est de compléter l'architecture de GeoTrack et de définir les mécanismes permettant de vérifier que la solution proposée répond aux exigences du projet.
+
+Ce Sprint est principalement consacré au dimensionnement, à la stratégie de données, à l'architecture globale, aux interfaces Figma ainsi qu'à la validation de la qualité du système.
+
+User Stories sélectionnées
+US07 — Dimensionner le système — 8 SP
+US08 — Définir la stratégie de données — 5 SP
+US09 — Produire le diagramme d'architecture — 5 SP
+US10 — Concevoir les interfaces Figma — 5 SP
+US11 — Définir la stratégie de tests — 5 SP
+US12 — Analyser les performances — 5 SP
+US13 — Analyser la sécurité — 5 SP
+US14 — Définir la stratégie d'observabilité — 3 SP
+US15 — Définir la maintenance et l'évolution — 3 SP
+
+Total : 44 Story Points
+
+Tâches
+US07 — Dimensionnement
+Définir le profil de charge du système.
+Estimer le nombre de véhicules connectés.
+Calculer le nombre de messages par seconde.
+Calculer le QPS et le MPS.
+Estimer le volume quotidien de données.
+Estimer le débit nécessaire.
+Définir les objectifs de latence.
+Identifier les principales limites du système.
+Documenter les hypothèses et les formules utilisées.
+US08 — Stratégie de données
+Identifier les différents types de données.
+Définir la stratégie de stockage.
+Sélectionner les technologies de base de données.
+Définir l'organisation des données.
+Définir la politique de conservation.
+Définir la stratégie de sauvegarde.
+Définir les mécanismes de récupération après incident.
+Identifier les mécanismes d'optimisation des accès.
+US09 — Architecture globale
+Identifier les composants principaux.
+Définir les responsabilités de chaque composant.
+Identifier les interactions entre les composants.
+Produire le diagramme d'architecture.
+Vérifier la cohérence avec les exigences.
+Documenter les principaux choix architecturaux.
+Identifier les principaux compromis.
+US10 — Interfaces Figma
+Identifier le parcours utilisateur principal.
+Concevoir l'écran de connexion.
+Concevoir le tableau de bord.
+Concevoir l'écran de visualisation de la flotte.
+Concevoir l'écran de détails d'un véhicule.
+Relier les écrans dans un prototype.
+Vérifier la cohérence de la navigation.
+US11 — Stratégie de tests
+Identifier les différents types de tests.
+Définir les tests fonctionnels.
+Définir les tests d'intégration.
+Définir les tests système.
+Définir les tests de performance.
+Définir les tests de sécurité.
+Préparer des scénarios d'acceptation.
+Définir les résultats attendus.
+US12 — Performance
+Identifier les principaux indicateurs de performance.
+Définir les objectifs de temps de réponse.
+Définir les objectifs de débit.
+Préparer les scénarios de charge.
+Définir un scénario de charge normale.
+Définir un scénario de forte charge.
+Définir les seuils d'acceptation.
+Définir une méthode de validation.
+US13 — Sécurité
+Identifier les données sensibles.
+Identifier les principales menaces.
+Analyser les risques d'accès non autorisé.
+Analyser les risques liés aux API.
+Analyser les risques liés aux communications.
+Définir les mécanismes d'authentification.
+Définir les mécanismes d'autorisation.
+Définir les mécanismes de chiffrement.
+Proposer des contrôles de sécurité.
+US14 — Observabilité
+Définir les événements à journaliser.
+Identifier les principales métriques.
+Définir une stratégie de monitoring.
+Définir les mécanismes de traçabilité.
+Définir les principales alertes.
+Proposer une stratégie de centralisation des journaux.
+US15 — Maintenance et évolution
+Définir la stratégie de maintenance.
+Définir une stratégie de mise à jour.
+Identifier les différents types de maintenance.
+Définir les mécanismes permettant de limiter les interruptions.
+Préparer une feuille de route d'évolution.
+Identifier les améliorations futures possibles.
+Prévoir une stratégie de retour arrière en cas de problème.
+Assignation
+
+Les tâches sont assignées aux différents membres directement dans Jira.
+
+Chaque membre doit être responsable de plusieurs billets et mettre régulièrement à jour leur état.
+
+Workflow
+
+Chaque billet suit le workflow :
+
+To Do → In Progress → Done
+
+Lorsqu'un membre commence une tâche, le billet passe de To Do à In Progress.
+
+Lorsque le livrable est terminé et vérifié, le billet passe à Done.
+
+Documentation dans Jira
+
+Chaque billet doit contenir :
+
+une description du travail ;
+un responsable ;
+les critères d'acceptation ;
+les Story Points ;
+la priorité ;
+les commentaires sur l'avancement ;
+une référence vers le fichier GitHub correspondant lorsque disponible.
+Définition de Done
+
+Une User Story est considérée comme terminée lorsque :
+
+ses critères d'acceptation sont satisfaits ;
+le livrable correspondant existe ;
+le livrable a été vérifié ;
+les modifications sont enregistrées dans Git ;
+le billet Jira contient une trace du travail réalisé.
