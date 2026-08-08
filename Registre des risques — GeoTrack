@@ -1,0 +1,226 @@
+# Registre des risques — GeoTrack
+
+## Objectif
+
+Ce registre identifie les principaux risques pouvant affecter la réalisation du projet GeoTrack ou le fonctionnement du système. Chaque risque est évalué selon sa probabilité et son impact, et une stratégie de mitigation est proposée.
+
+L'évaluation utilise trois niveaux :
+
+* **Faible**
+* **Moyenne**
+* **Élevée**
+
+---
+
+## Registre des risques
+
+| ID  | Catégorie                | Risque                                                                                 | Probabilité | Impact | Niveau   | 
+| --- | ------------------------ | -------------------------------------------------------------------------------------- | ----------- | ------ | -------- | 
+| R01 | Technique                | Surcharge du système lors du traitement simultané des données de 10 000 véhicules      | Élevée      | Élevé  | Critique |                 
+| R02 | Technique                | Perte de messages de télémétrie lors d'une panne ou d'une surcharge                    | Moyenne     | Élevé  | Élevé    | 
+| R03 | Organisationnel          | Retard dans la réalisation des tâches assignées                                        | Moyenne     | Moyen  | Moyen    |                      
+| R04 | Humain                   | Mauvaise coordination entre les membres de l'équipe                                    | Moyenne     | Élevé  | Élevé    | 
+| R05 | Exigence — Performance   | Les positions des véhicules ne sont pas affichées en moins de quelques secondes        | Moyenne     | Élevé  | Élevé    | 
+| R06 | Exigence — Stockage      | Le volume de données sur deux ans dépasse la capacité de stockage prévue               | Élevée      | Élevé  | Critique | 
+| R07 | Exigence — Disponibilité | Une panne d'un composant critique provoque une interruption du service                 | Moyenne     | Élevé  | Élevé    |  
+| R08 | Sujet — Geofencing       | Des imprécisions GPS provoquent de fausses détections d'entrée ou de sortie d'une zone | Moyenne     | Moyen  | Moyen    |
+
+---
+
+# Détails des risques
+
+## R01 — Surcharge du système
+
+**Catégorie :** Technique
+**Probabilité :** Élevée
+**Impact :** Élevé
+**Niveau :** Critique
+
+### Description
+
+GeoTrack doit gérer 10 000 véhicules transmettant leurs données toutes les 5 secondes, ce qui représente environ **2 000 messages de télémétrie par seconde**. Une architecture insuffisamment dimensionnée pourrait entraîner une saturation des services de traitement.
+
+### Conséquences
+
+* Augmentation du temps de traitement.
+* Retard dans l'affichage des positions.
+* Accumulation des messages.
+* Dégradation du service.
+
+### Mitigation
+
+Prévoir une architecture distribuée et scalable permettant la mise à l'échelle horizontale des composants de traitement.
+
+---
+
+## R02 — Perte de messages de télémétrie
+
+**Catégorie :** Technique
+**Probabilité :** Moyenne
+**Impact :** Élevé
+**Niveau :** Élevé
+
+### Description
+
+Une panne réseau, une surcharge ou l'indisponibilité temporaire d'un service pourrait entraîner la perte de messages envoyés par les véhicules.
+
+### Conséquences
+
+* Historique incomplet.
+* Position d'un véhicule incorrecte ou obsolète.
+* Rapports analytiques moins fiables.
+* Alertes potentiellement manquées.
+
+### Mitigation
+
+Utiliser un mécanisme de messagerie fiable avec mise en file d'attente, persistance temporaire, retry et confirmation du traitement.
+
+---
+
+## R03 — Retard dans les tâches
+
+**Catégorie :** Organisationnel
+**Probabilité :** Moyenne
+**Impact :** Moyen
+**Niveau :** Moyen
+
+### Description
+
+Certaines tâches peuvent prendre plus de temps que prévu, ce qui peut retarder les autres activités du Sprint.
+
+### Conséquences
+
+* User Stories non terminées.
+* Retard dans les livrables.
+* Surcharge de travail en fin de projet.
+
+### Mitigation
+
+Suivre régulièrement les billets Jira, identifier rapidement les tâches bloquées et redistribuer le travail lorsque nécessaire.
+
+---
+
+## R04 — Mauvaise coordination de l'équipe
+
+**Catégorie :** Humain
+**Probabilité :** Moyenne
+**Impact :** Élevé
+**Niveau :** Élevé
+
+### Description
+
+Un manque de communication peut conduire plusieurs membres à réaliser le même travail ou à produire des livrables incohérents.
+
+### Conséquences
+
+* Duplication du travail.
+* Incohérences dans la documentation.
+* Conflits Git.
+* Retards.
+
+### Mitigation
+
+Utiliser Jira pour l'assignation des tâches, organiser des points de suivi et utiliser Git/GitHub pour centraliser les différentes versions des livrables.
+
+---
+
+## R05 — Latence trop importante
+
+**Catégorie :** Lié aux exigences — Performance
+**Probabilité :** Moyenne
+**Impact :** Élevé
+**Niveau :** Élevé
+
+### Description
+
+GeoTrack doit afficher les nouvelles positions en moins de quelques secondes. Une charge importante ou une architecture inadéquate pourrait empêcher le respect de cette exigence.
+
+### Conséquences
+
+* Carte affichant des positions obsolètes.
+* Mauvais suivi des véhicules.
+* Non-respect d'une exigence principale du système.
+
+### Mitigation
+
+Utiliser un traitement asynchrone presque en temps réel, limiter les traitements bloquants et réaliser des tests de performance.
+
+---
+
+## R06 — Capacité de stockage insuffisante
+
+**Catégorie :** Lié aux exigences — Stockage
+**Probabilité :** Élevée
+**Impact :** Élevé
+**Niveau :** Critique
+
+### Description
+
+Avec environ **172,8 millions de messages par jour**, GeoTrack pourrait générer environ **126,1 milliards de messages sur deux ans**. Une mauvaise estimation de la taille moyenne des messages pourrait entraîner un sous-dimensionnement important du stockage.
+
+### Conséquences
+
+* Saturation du stockage.
+* Augmentation des coûts.
+* Impossibilité de respecter la conservation de deux ans.
+* Dégradation des performances des requêtes historiques.
+
+### Mitigation
+
+Estimer la taille moyenne d'un message, calculer la volumétrie sur deux ans et prévoir une stratégie de stockage scalable avec partitionnement, compression et archivage.
+
+---
+
+## R07 — Indisponibilité du système
+
+**Catégorie :** Lié aux exigences — Disponibilité
+**Probabilité :** Moyenne
+**Impact :** Élevé
+**Niveau :** Élevé
+
+### Description
+
+GeoTrack doit être disponible 24 h/24 et 7 j/7. Une panne d'un serveur, d'une base de données ou d'un autre composant critique pourrait interrompre le suivi des véhicules.
+
+### Conséquences
+
+* Interruption du suivi temps réel.
+* Retard dans les alertes.
+* Accumulation ou perte potentielle de télémétrie.
+* Non-respect de l'exigence de haute disponibilité.
+
+### Mitigation
+
+Prévoir plusieurs instances pour les composants critiques, la réplication des données, des mécanismes de basculement et une surveillance de l'état des services.
+
+---
+
+## R08 — Fausses détections de geofencing
+
+**Catégorie :** Lié au sujet — Geofencing
+**Probabilité :** Moyenne
+**Impact :** Moyen
+**Niveau :** Moyen
+
+### Description
+
+La précision GPS peut varier. Un véhicule situé près de la limite d'une zone pourrait apparaître alternativement à l'intérieur et à l'extérieur de celle-ci.
+
+### Conséquences
+
+* Fausses alertes.
+* Multiplication des événements d'entrée/sortie.
+* Données analytiques incorrectes.
+* Perte de confiance dans les alertes de geofencing.
+
+### Mitigation
+
+Utiliser une marge de tolérance autour des limites des zones et, lorsque nécessaire, confirmer un changement de zone à partir de plusieurs positions successives.
+
+---
+
+# Suivi des risques
+
+Le registre des risques doit être réévalué au cours des deux Sprints. Les risques peuvent évoluer selon l'avancement du projet et les résultats des analyses, expérimentations et tests.
+
+Les risques critiques ou élevés doivent être suivis en priorité et les mesures de mitigation doivent être prises en compte dans les choix d'architecture de GeoTrack.
