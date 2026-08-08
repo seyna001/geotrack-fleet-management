@@ -1,101 +1,46 @@
-
 # Volet 1 — Pilotage Agile et collaboration
 
+## Objectif
 
+Ce volet présente l'organisation et le suivi du projet **GeoTrack** selon une démarche Agile simplifiée. Le projet est géré avec **Jira** pour la planification et le suivi des tâches, et avec **Git/GitHub** pour la gestion des versions et la collaboration entre les membres de l'équipe.
 
-Ce volet présente l'organisation Agile mise en place pour le projet GeoTrack ainsi que les méthodes utilisées par l'équipe pour assurer le suivi du travail et la collaboration.
+## Organisation Agile
 
-L'équipe utilise **Jira** pour la planification et le suivi des tâches et **Git/GitHub** pour la gestion des versions et le partage des livrables.
+Le Product Backlog regroupe **15 User Stories**, chacune définie avec des critères d'acceptation, une priorité, une estimation en Story Points et un Epic associé.
 
-## Objectifs
+Le travail est réparti sur deux Sprints :
 
-Les principaux objectifs de ce volet sont :
+* **Sprint 1 — Analyse et conception du suivi temps réel : 37 SP**
+* **Sprint 2 — Stockage, alertes et résilience : 50 SP**
 
-* organiser le projet à l'aide d'une démarche Agile simplifiée ;
-* construire et maintenir un Product Backlog ;
-* définir les User Stories et leurs critères d'acceptation ;
-* estimer les User Stories en Story Points ;
-* prioriser le travail ;
-* planifier et simuler deux Sprints ;
-* suivre la progression des tâches dans Jira ;
-* identifier et suivre les risques du projet ;
-* assurer la collaboration de l'équipe avec Git et GitHub ;
-* démontrer la contribution individuelle de chaque membre.
+Les User Stories sont décomposées en tâches et assignées aux membres de l'équipe. Leur progression est suivie dans Jira selon le workflow :
 
-## Organisation du travail
+**To Do → In Progress → Done**
 
-Le projet est organisé autour de deux Sprints.
+Les membres documentent régulièrement leur travail à travers les commentaires Jira et référencent les livrables correspondants.
 
-### Sprint 1 — Analyse et conception
+## Gestion des risques
 
-Le premier Sprint est principalement consacré à :
+Un registre des risques est maintenu afin d'identifier et de suivre les principaux risques techniques, organisationnels, humains et ceux liés aux exigences de GeoTrack. Chaque risque est évalué selon sa probabilité et son impact, avec des mesures de mitigation associées.
 
-* l'analyse du système ;
-* l'identification des parties prenantes ;
-* la définition des exigences fonctionnelles et non fonctionnelles ;
-* la modélisation UML ;
-* la comparaison des styles architecturaux ;
-* la préparation du registre des risques.
+## Gestion Git et collaboration
 
-### Sprint 2 — Architecture et validation
+Le dépôt GitHub centralise les livrables du projet et permet de suivre les contributions individuelles.
 
-Le deuxième Sprint est principalement consacré à :
+La stratégie de branches repose sur :
 
-* l'architecture globale du système ;
-* le dimensionnement ;
-* la stratégie de données ;
-* la conception des interfaces Figma ;
-* la stratégie de tests ;
-* l'analyse de sécurité ;
-* l'analyse de performance ;
-* l'observabilité ;
-* la maintenance et l'évolution du système.
+* `main` : version stable du projet ;
 
-## Outils utilisés
+* `feature/*` : branches utilisées pour les différents travaux.
 
-### Jira
+Les documents et livrables sont ajoutés progressivement avec des commits réguliers et descriptifs afin de conserver un historique cohérent de l'évolution du projet.
 
-Jira est utilisé pour :
+## Livrables du volet
 
-* le Product Backlog ;
-* les User Stories ;
-* les critères d'acceptation ;
-* les Story Points ;
-* la priorisation ;
-* les Sprints ;
-* l'assignation des tâches ;
-* le suivi To Do → In Progress → Done ;
-* les commentaires et références vers les livrables.
-
-### Git et GitHub
-
-Git et GitHub sont utilisés pour :
-
-* centraliser les livrables ;
-* conserver l'historique des modifications ;
-* démontrer les contributions individuelles ;
-* travailler avec différentes branches ;
-* permettre une évolution progressive des documents.
-
-## Stratégie Git
-
-Le dépôt contient une branche principale :
-
-`main`
-
-ainsi que des branches de travail :
-
-* `feature/volet-1`
-* `feature/volet-2`
-* `feature/volet-3`
-
-
-
-## Contenu du dossier
-
-* `jira/product-backlog.md` : Product Backlog du projet.
-* `jira/sprint-1.md` : planification et suivi du Sprint 1.
-* `jira/sprint-2.md` : planification et suivi du Sprint 2.
-* `jira/captures/` : captures ou exports du projet Jira.
-* `registre-risques/registre-risques.md` : registre des risques.
-
+* Product Backlog et User Stories ;
+* planification des deux Sprints ;
+* captures du backlog et des tableaux Jira ;
+* registre des risques ;
+* historique des commits Git ;
+* documentation de la stratégie de branches ;
+* bilan des contributions individuelles de l'équipe.
