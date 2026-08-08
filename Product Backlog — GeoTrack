@@ -1,0 +1,229 @@
+
+Le Product Backlog regroupe les principales User Stories identifiées pour la réalisation du projet GeoTrack.
+
+US01 — Identifier les parties prenantes
+
+Priorité : Haute
+Estimation : 2 Story Points
+
+User Story
+
+En tant qu'équipe de conception, nous voulons identifier les parties prenantes du système afin de comprendre leurs responsabilités et leurs besoins.
+
+Critères d'acceptation
+
+Les principales parties prenantes sont identifiées.
+Le rôle de chaque partie prenante est expliqué.
+Les interactions principales avec GeoTrack sont précisées.
+US02 — Définir les exigences fonctionnelles
+
+Priorité : Haute
+Estimation : 3 Story Points
+
+User Story
+
+En tant qu'équipe de conception, nous voulons identifier les exigences fonctionnelles afin de déterminer les fonctionnalités principales de GeoTrack.
+
+Critères d'acceptation
+
+Les fonctionnalités principales sont identifiées.
+Les exigences sont clairement décrites.
+Les exigences sont liées aux besoins des utilisateurs.
+US03 — Définir les exigences non fonctionnelles
+
+Priorité : Haute
+Estimation : 3 Story Points
+
+User Story
+
+En tant qu'architecte logiciel, je veux définir les exigences non fonctionnelles afin d'établir les objectifs de performance, de sécurité, de disponibilité et de fiabilité du système.
+
+Critères d'acceptation
+
+Les exigences de performance sont définies.
+Les exigences de disponibilité sont définies.
+Les exigences de sécurité sont définies.
+Les exigences de fiabilité sont définies.
+US04 — Réaliser le diagramme de cas d'utilisation
+
+Priorité : Haute
+Estimation : 3 Story Points
+
+User Story
+
+En tant qu'équipe de conception, nous voulons modéliser les interactions entre les utilisateurs et GeoTrack afin de représenter les fonctionnalités principales du système.
+
+Critères d'acceptation
+
+Les acteurs sont représentés.
+Les cas d'utilisation principaux sont représentés.
+Les relations sont clairement indiquées.
+Le diagramme est compréhensible.
+US05 — Réaliser les diagrammes de séquence
+
+Priorité : Haute
+Estimation : 5 Story Points
+
+User Story
+
+En tant qu'architecte logiciel, je veux représenter les échanges entre les composants afin de comprendre le comportement du système lors de scénarios importants.
+
+Critères d'acceptation
+
+Au moins deux scénarios sont modélisés.
+Les principaux composants sont représentés.
+L'ordre des messages est clairement indiqué.
+Les diagrammes correspondent aux cas d'utilisation.
+US06 — Comparer les styles architecturaux
+
+Priorité : Haute
+Estimation : 5 Story Points
+
+User Story
+
+En tant qu'architecte logiciel, je veux comparer plusieurs styles architecturaux afin de sélectionner celui qui répond le mieux aux besoins de GeoTrack.
+
+Critères d'acceptation
+
+Au moins deux architectures sont comparées.
+Les avantages sont identifiés.
+Les inconvénients sont identifiés.
+Le choix final est justifié.
+US07 — Dimensionner le système
+
+Priorité : Haute
+Estimation : 8 Story Points
+
+User Story
+
+En tant qu'architecte logiciel, je veux estimer la charge du système afin de proposer une infrastructure adaptée aux besoins de GeoTrack.
+
+Critères d'acceptation
+
+Le QPS est estimé.
+Le MPS est estimé.
+Le volume quotidien est calculé.
+Le débit nécessaire est estimé.
+Les objectifs de latence sont précisés.
+Les hypothèses et unités sont documentées.
+US08 — Définir la stratégie de données
+
+Priorité : Haute
+Estimation : 5 Story Points
+
+User Story
+
+En tant qu'architecte logiciel, je veux définir une stratégie de stockage afin de garantir la disponibilité, les performances et la conservation des données.
+
+Critères d'acceptation
+
+Les types de données sont identifiés.
+Les technologies de stockage sont justifiées.
+La conservation des données est définie.
+La stratégie de sauvegarde est décrite.
+Les mécanismes de récupération sont expliqués.
+US09 — Produire le diagramme d'architecture
+
+Priorité : Haute
+Estimation : 5 Story Points
+
+User Story
+
+En tant qu'architecte logiciel, je veux représenter l'architecture globale afin de montrer les principaux composants et leurs interactions.
+
+Critères d'acceptation
+
+Les composants principaux sont représentés.
+Les interactions sont indiquées.
+Les responsabilités sont expliquées.
+Le diagramme correspond aux choix architecturaux.
+US10 — Concevoir les interfaces Figma
+
+Priorité : Moyenne
+Estimation : 5 Story Points
+
+User Story
+
+En tant qu'utilisateur de GeoTrack, je veux disposer d'une interface claire afin de consulter facilement les informations relatives à la flotte.
+
+Critères d'acceptation
+
+Au moins 3 à 4 écrans sont réalisés.
+Les écrans représentent le parcours utilisateur principal.
+La navigation est cohérente.
+La maquette est en haute fidélité.
+US11 — Définir la stratégie de tests
+
+Priorité : Haute
+Estimation : 5 Story Points
+
+User Story
+
+En tant qu'équipe qualité, nous voulons définir une stratégie de tests afin de vérifier que l'architecture répond correctement aux exigences.
+
+Critères d'acceptation
+
+Les différents niveaux de tests sont identifiés.
+Des scénarios représentatifs sont fournis.
+Les résultats attendus sont précisés.
+Des scénarios d'acceptation sont définis.
+US12 — Analyser les performances
+
+Priorité : Haute
+Estimation : 5 Story Points
+
+User Story
+
+En tant qu'équipe qualité, nous voulons définir les indicateurs de performance afin de vérifier que GeoTrack peut supporter la charge prévue.
+
+Critères d'acceptation
+
+Les principaux KPI sont définis.
+Les scénarios de charge sont identifiés.
+Des seuils de performance sont proposés.
+Une méthode de validation est définie.
+US13 — Analyser la sécurité
+
+Priorité : Haute
+Estimation : 5 Story Points
+
+User Story
+
+En tant qu'équipe sécurité, nous voulons identifier les principales menaces afin de protéger les données et les services de GeoTrack.
+
+Critères d'acceptation
+
+Les principales menaces sont identifiées.
+Les impacts sont analysés.
+Les contrôles de sécurité sont proposés.
+Les risques résiduels sont expliqués.
+US14 — Définir la stratégie d'observabilité
+
+Priorité : Moyenne
+Estimation : 3 Story Points
+
+User Story
+
+En tant qu'équipe d'exploitation, nous voulons superviser GeoTrack afin de détecter rapidement les anomalies et les pannes.
+
+Critères d'acceptation
+
+Une stratégie de journalisation est proposée.
+Les métriques importantes sont identifiées.
+Une stratégie de monitoring est décrite.
+Des mécanismes d'alerte sont proposés.
+US15 — Définir la maintenance et l'évolution
+
+Priorité : Moyenne
+Estimation : 3 Story Points
+
+User Story
+
+En tant qu'équipe responsable de GeoTrack, nous voulons définir une stratégie de maintenance afin de permettre au système d'évoluer avec un minimum d'interruptions.
+
+Critères d'acceptation
+
+La stratégie de maintenance est définie.
+Les mécanismes de mise à jour sont expliqués.
+Une feuille de route d'évolution est proposée.
+Les moyens de limiter les interruptions sont décrits.
