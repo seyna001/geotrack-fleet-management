@@ -1,134 +1,129 @@
+Sprint 2 — Stockage, alertes et résilience
 Objectif du Sprint
 
-L'objectif du Sprint 2 est de compléter l'architecture de GeoTrack et de définir les mécanismes permettant de vérifier que la solution proposée répond aux exigences du projet.
+L'objectif du Sprint 2 est de concevoir et de valider les mécanismes de GeoTrack liés aux alertes de vitesse, au geofencing, à l'historique des trajets et à la conservation des données.
 
-Ce Sprint est principalement consacré au dimensionnement, à la stratégie de données, à l'architecture globale, aux interfaces Figma ainsi qu'à la validation de la qualité du système.
+Le Sprint vise également à définir les mécanismes architecturaux permettant d'assurer la haute disponibilité du système 24 h/24 et 7 j/7 ainsi que sa tolérance aux pannes.
 
 User Stories sélectionnées
-US07 — Dimensionner le système — 8 SP
-US08 — Définir la stratégie de données — 5 SP
-US09 — Produire le diagramme d'architecture — 5 SP
-US10 — Concevoir les interfaces Figma — 5 SP
-US11 — Définir la stratégie de tests — 5 SP
-US12 — Analyser les performances — 5 SP
-US13 — Analyser la sécurité — 5 SP
-US14 — Définir la stratégie d'observabilité — 3 SP
-US15 — Définir la maintenance et l'évolution — 3 SP
+US05 — Recevoir une alerte de dépassement de vitesse — 5 SP
+US06 — Créer et gérer des zones géographiques — 5 SP
+US07 — Détecter l'entrée ou la sortie d'un véhicule d'une zone — 8 SP
+US08 — Consulter l'historique des trajets d'un véhicule — 8 SP
+US12 — Conserver les données de télémétrie pendant deux ans — 8 SP
+US13 — Assurer la haute disponibilité du système 24 h/24 et 7 j/7 — 8 SP
+US14 — Assurer la tolérance aux pannes du système — 8 SP
 
-Total : 44 Story Points
+Total : 50 Story Points
 
+Epics associés
+Epic — Alertes et sécurité
+US05 — Recevoir une alerte de dépassement de vitesse
+Epic — Geofencing
+US06 — Créer et gérer des zones géographiques
+US07 — Détecter l'entrée ou la sortie d'un véhicule d'une zone
+Epic — Historique et stockage
+US08 — Consulter l'historique des trajets d'un véhicule
+US12 — Conserver les données de télémétrie pendant deux ans
+Epic — Disponibilité et résilience
+US13 — Assurer la haute disponibilité 24/7
+US14 — Assurer la tolérance aux pannes
 Tâches
-US07 — Dimensionnement
-Définir le profil de charge du système.
-Estimer le nombre de véhicules connectés.
-Calculer le nombre de messages par seconde.
-Calculer le QPS et le MPS.
-Estimer le volume quotidien de données.
-Estimer le débit nécessaire.
-Définir les objectifs de latence.
-Identifier les principales limites du système.
-Documenter les hypothèses et les formules utilisées.
-US08 — Stratégie de données
-Identifier les différents types de données.
-Définir la stratégie de stockage.
-Sélectionner les technologies de base de données.
-Définir l'organisation des données.
-Définir la politique de conservation.
-Définir la stratégie de sauvegarde.
-Définir les mécanismes de récupération après incident.
-Identifier les mécanismes d'optimisation des accès.
-US09 — Architecture globale
-Identifier les composants principaux.
-Définir les responsabilités de chaque composant.
-Identifier les interactions entre les composants.
-Produire le diagramme d'architecture.
-Vérifier la cohérence avec les exigences.
-Documenter les principaux choix architecturaux.
-Identifier les principaux compromis.
-US10 — Interfaces Figma
-Identifier le parcours utilisateur principal.
-Concevoir l'écran de connexion.
-Concevoir le tableau de bord.
-Concevoir l'écran de visualisation de la flotte.
-Concevoir l'écran de détails d'un véhicule.
-Relier les écrans dans un prototype.
-Vérifier la cohérence de la navigation.
-US11 — Stratégie de tests
-Identifier les différents types de tests.
-Définir les tests fonctionnels.
-Définir les tests d'intégration.
-Définir les tests système.
-Définir les tests de performance.
-Définir les tests de sécurité.
-Préparer des scénarios d'acceptation.
-Définir les résultats attendus.
-US12 — Performance
-Identifier les principaux indicateurs de performance.
-Définir les objectifs de temps de réponse.
-Définir les objectifs de débit.
-Préparer les scénarios de charge.
-Définir un scénario de charge normale.
-Définir un scénario de forte charge.
-Définir les seuils d'acceptation.
-Définir une méthode de validation.
-US13 — Sécurité
-Identifier les données sensibles.
-Identifier les principales menaces.
-Analyser les risques d'accès non autorisé.
-Analyser les risques liés aux API.
-Analyser les risques liés aux communications.
-Définir les mécanismes d'authentification.
-Définir les mécanismes d'autorisation.
-Définir les mécanismes de chiffrement.
-Proposer des contrôles de sécurité.
-US14 — Observabilité
-Définir les événements à journaliser.
-Identifier les principales métriques.
-Définir une stratégie de monitoring.
-Définir les mécanismes de traçabilité.
-Définir les principales alertes.
-Proposer une stratégie de centralisation des journaux.
-US15 — Maintenance et évolution
-Définir la stratégie de maintenance.
-Définir une stratégie de mise à jour.
-Identifier les différents types de maintenance.
-Définir les mécanismes permettant de limiter les interruptions.
-Préparer une feuille de route d'évolution.
-Identifier les améliorations futures possibles.
-Prévoir une stratégie de retour arrière en cas de problème.
+US05 — Alerte de dépassement de vitesse
+T5.1 — Définir les règles de détection des excès de vitesse
+T5.2 — Concevoir le mécanisme de génération des alertes
+T5.3 — Modéliser le flux d'une alerte de vitesse
+T5.4 — Valider le fonctionnement des alertes de vitesse
+Livrables attendus
+Règles de détection des dépassements.
+Description du mécanisme d'alerte.
+Diagramme de séquence de l'alerte de vitesse.
+Résultats de validation.
+US06 — Créer et gérer des zones géographiques
+T6.1 — Définir le modèle d'une zone géographique
+T6.2 — Concevoir la création d'une zone géographique
+T6.3 — Concevoir la modification et la suppression des zones
+T6.4 — Modéliser la gestion des zones géographiques
+Livrables attendus
+Modèle d'une zone géographique.
+Documentation du fonctionnement du geofencing.
+Modélisation de la création, modification et suppression des zones.
+US07 — Détecter l'entrée ou la sortie d'une zone
+T7.1 — Analyser le mécanisme de détection entrée/sortie
+T7.2 — Définir les événements de geofencing
+T7.3 — Concevoir le traitement du geofencing
+T7.4 — Réaliser le diagramme de séquence du geofencing
+T7.5 — Valider la détection entrée/sortie
+Livrables attendus
+Analyse du mécanisme de détection.
+Définition des événements d'entrée et de sortie.
+Description du traitement du geofencing.
+Diagramme de séquence.
+Résultats de validation.
+US08 — Consulter l'historique des trajets
+T8.1 — Identifier les données nécessaires à l'historique
+T8.2 — Concevoir le stockage de l'historique des trajets
+T8.3 — Concevoir la reconstruction d'un trajet
+T8.4 — Modéliser la consultation de l'historique
+Livrables attendus
+Liste des données nécessaires.
+Proposition d'organisation des données historiques.
+Description du mécanisme de reconstruction des trajets.
+Diagramme de consultation de l'historique.
+US12 — Conserver les données pendant deux ans
+T12.1 — Calculer le volume de télémétrie sur deux ans
+T12.2 — Estimer l'espace de stockage nécessaire
+T12.3 — Définir la stratégie de stockage
+T12.4 — Définir la politique de rétention des données
+T12.5 — Documenter la solution de stockage
+Livrables attendus
+Calcul du nombre de messages générés.
+Estimation du volume de stockage.
+Stratégie de stockage.
+Politique de rétention.
+Documentation de la solution retenue.
+
+Avec 10 000 véhicules transmettant toutes les 5 secondes :
+
+2 000 messages/seconde
+172 800 000 messages/jour
+63 072 000 000 messages/an
+126 144 000 000 messages sur deux ans
+US13 — Assurer la haute disponibilité 24/7
+T13.1 — Identifier les composants critiques de GeoTrack
+T13.2 — Identifier les points uniques de défaillance
+T13.3 — Définir les mécanismes de redondance
+T13.4 — Concevoir l'architecture haute disponibilité
+T13.5 — Valider le scénario de haute disponibilité
+Livrables attendus
+Liste des composants critiques.
+Analyse des points uniques de défaillance.
+Description des mécanismes de redondance.
+Diagramme d'architecture haute disponibilité.
+Résultats de validation.
+US14 — Assurer la tolérance aux pannes
+T14.1 — Identifier les scénarios de panne
+T14.2 — Définir la gestion des messages en cas de panne
+T14.3 — Définir les mécanismes de reprise
+T14.4 — Modéliser la tolérance aux pannes
+T14.5 — Tester ou simuler un scénario de panne
+Livrables attendus
+Liste des principaux scénarios de panne.
+Stratégie de conservation des messages pendant une défaillance.
+Mécanismes de reprise et de basculement.
+Modélisation de la tolérance aux pannes.
+Résultats de la simulation ou du test.
 Assignation
 
-Les tâches sont assignées aux différents membres directement dans Jira.
+Les User Stories et les tâches associées sont assignées aux différents membres de l'équipe directement dans Jira.
 
-Chaque membre doit être responsable de plusieurs billets et mettre régulièrement à jour leur état.
+Chaque membre doit :
 
-Workflow
+être responsable de plusieurs billets Jira ;
+faire évoluer régulièrement ses billets ;
+documenter les actions réalisées ;
+ajouter des commentaires utiles sur l'avancement ;
+joindre ou référencer les livrables produits ;
+contribuer au dépôt Git avec son propre compte.
 
-Chaque billet suit le workflow :
-
-To Do → In Progress → Done
-
-Lorsqu'un membre commence une tâche, le billet passe de To Do à In Progress.
-
-Lorsque le livrable est terminé et vérifié, le billet passe à Done.
-
-Documentation dans Jira
-
-Chaque billet doit contenir :
-
-une description du travail ;
-un responsable ;
-les critères d'acceptation ;
-les Story Points ;
-la priorité ;
-les commentaires sur l'avancement ;
-une référence vers le fichier GitHub correspondant lorsque disponible.
-Définition de Done
-
-Une User Story est considérée comme terminée lorsque :
-
-ses critères d'acceptation sont satisfaits ;
-le livrable correspondant existe ;
-le livrable a été vérifié ;
-les modifications sont enregistrées dans Git ;
-le billet Jira contient une trace du travail réalisé.
+La répartition doit permettre de démontrer une contribution active de chaque membre pendant toute la durée du Sprint.
