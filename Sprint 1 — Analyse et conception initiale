@@ -1,82 +1,149 @@
-Objectif du Sprint
+# Sprint 1 — Analyse et conception du suivi temps réel
 
-L'objectif du Sprint 1 est d'établir les fondations fonctionnelles et architecturales de GeoTrack en analysant les besoins, en produisant les premières modélisations et en identifiant les principaux risques.
+## Objectif du Sprint
 
-User Stories sélectionnées
-US01 — Identifier les parties prenantes — 2 SP
-US02 — Définir les exigences fonctionnelles — 3 SP
-US03 — Définir les exigences non fonctionnelles — 3 SP
-US04 — Réaliser le diagramme de cas d'utilisation — 3 SP
-US05 — Réaliser les diagrammes de séquence — 5 SP
-US06 — Comparer les styles architecturaux — 5 SP
+L'objectif du Sprint 1 est d'analyser et de concevoir les fonctionnalités principales de GeoTrack liées à la réception des positions GPS et des données de télémétrie, au suivi des véhicules et à l'affichage presque en temps réel.
 
-Total : 21 Story Points
+Le Sprint vise également à analyser les contraintes de performance imposées par une flotte de 10 000 véhicules transmettant leurs données toutes les 5 secondes.
 
-Tâches
-US01 — Parties prenantes
-Identifier les différents acteurs.
-Décrire leurs responsabilités.
-Documenter leurs interactions avec GeoTrack.
-US02 — Exigences fonctionnelles
-Analyser le sujet.
-Identifier les fonctionnalités principales.
-Classer les exigences.
-Vérifier leur cohérence.
-US03 — Exigences non fonctionnelles
-Identifier les exigences de performance.
-Identifier les exigences de sécurité.
-Identifier les exigences de disponibilité.
-Identifier les exigences de fiabilité.
-US04 — Cas d'utilisation
-Identifier les acteurs.
-Identifier les cas d'utilisation.
-Construire le diagramme.
-Vérifier la cohérence du diagramme.
-US05 — Diagrammes de séquence
-Sélectionner les scénarios importants.
-Identifier les composants impliqués.
-Construire le premier diagramme de séquence.
-Construire le deuxième diagramme de séquence.
-Vérifier les interactions.
-US06 — Architecture
-Identifier deux styles architecturaux pertinents.
-Comparer leurs avantages et inconvénients.
-Définir les critères de décision.
-Sélectionner l'architecture retenue.
-Justifier le choix.
-Assignation
+## User Stories sélectionnées
 
-Les tâches sont assignées aux différents membres directement dans Jira.
+* **US01 — Recevoir la position GPS des véhicules — 8 SP**
+* **US02 — Recevoir les données de télémétrie des véhicules — 8 SP**
+* **US03 — Afficher les véhicules sur une carte en temps réel — 8 SP**
+* **US04 — Consulter les informations détaillées d'un véhicule — 5 SP**
+* **US15 — Afficher les nouvelles positions des véhicules en moins de quelques secondes — 8 SP**
 
-Chaque membre doit être responsable de plusieurs billets et mettre régulièrement à jour leur état.
+**Total : 37 Story Points**
 
-Workflow
+---
 
-Chaque billet suit le workflow :
+## Epics associés
 
-To Do → In Progress → Done
+### Epic — Collecte des données véhicules
 
-Lorsqu'un membre commence une tâche, le billet passe de To Do à In Progress.
+* US01 — Recevoir la position GPS des véhicules
+* US02 — Recevoir les données de télémétrie des véhicules
 
-Lorsque le livrable est terminé et vérifié, le billet passe à Done.
+### Epic — Suivi des véhicules en temps réel
 
-Documentation dans Jira
+* US03 — Afficher les véhicules sur une carte en temps réel
 
-Chaque billet doit contenir :
+### Epic — Gestion et consultation de la flotte
 
-une description du travail ;
-un responsable ;
-les critères d'acceptation ;
-les Story Points ;
-la priorité ;
-les commentaires sur l'avancement ;
-une référence vers le fichier GitHub correspondant lorsque disponible.
-Définition de Done
+* US04 — Consulter les informations détaillées d'un véhicule
 
-Une User Story est considérée comme terminée lorsque :
+### Epic — Performance et traitement temps réel
 
-ses critères d'acceptation sont satisfaits ;
-le livrable correspondant existe ;
-le livrable a été vérifié ;
-les modifications sont enregistrées dans Git ;
-le billet Jira contient une trace du travail réalisé.
+* US15 — Afficher les nouvelles positions des véhicules en moins de quelques secondes
+
+---
+
+# Tâches
+
+## US01 — Recevoir la position GPS des véhicules
+
+* **T1.1 — Analyser les données GPS transmises par les véhicules**
+* **T1.2 — Définir le format d'un message GPS**
+* **T1.3 — Modéliser le flux de réception GPS**
+* **T1.4 — Documenter la réception des positions GPS**
+
+### Livrables attendus
+
+* Documentation des données GPS.
+* Structure proposée d'un message GPS.
+* Diagramme représentant le flux de réception GPS.
+* Documentation du fonctionnement de la réception des positions.
+
+---
+
+## US02 — Recevoir les données de télémétrie des véhicules
+
+* **T2.1 — Identifier les données de télémétrie**
+* **T2.2 — Définir le format du message de télémétrie**
+* **T2.3 — Estimer la taille moyenne d'un message**
+* **T2.4 — Calculer le débit de messages**
+* **T2.5 — Documenter le traitement de la télémétrie**
+
+### Livrables attendus
+
+* Liste des données de télémétrie.
+* Structure proposée du message de télémétrie.
+* Hypothèse justifiée concernant la taille moyenne d'un message.
+* Calcul de la charge générée par la flotte.
+* Documentation du traitement des données.
+
+Avec 10 000 véhicules transmettant toutes les 5 secondes, le débit moyen à considérer est :
+
+**10 000 ÷ 5 = 2 000 messages par seconde.**
+
+---
+
+## US03 — Afficher les véhicules sur une carte en temps réel
+
+* **T3.1 — Identifier les besoins de l'affichage cartographique**
+* **T3.2 — Concevoir l'interface de la carte**
+* **T3.3 — Concevoir la mise à jour des positions**
+* **T3.4 — Réaliser le diagramme de séquence du suivi temps réel**
+* **T3.5 — Valider les critères d'affichage**
+
+### Livrables attendus
+
+* Description des besoins de l'affichage cartographique.
+* Maquette de l'interface.
+* Documentation du mécanisme de mise à jour des positions.
+* Diagramme de séquence du suivi en temps réel.
+* Résultat de la validation des critères d'acceptation.
+
+---
+
+## US04 — Consulter les informations détaillées d'un véhicule
+
+* **T4.1 — Identifier les informations à afficher**
+* **T4.2 — Concevoir la vue détaillée d'un véhicule**
+* **T4.3 — Modéliser la récupération des informations**
+* **T4.4 — Valider la vue détaillée**
+
+### Livrables attendus
+
+* Liste des informations du véhicule.
+* Maquette de la vue détaillée.
+* Modélisation de la récupération des dernières données.
+* Résultat de la validation de la vue.
+
+Les informations considérées comprennent notamment la position GPS, la vitesse, la direction, l'état du véhicule, les informations de diagnostic et l'heure de la dernière télémétrie reçue.
+
+---
+
+## US15 — Afficher les positions en moins de quelques secondes
+
+* **T15.1 — Analyser la contrainte de latence**
+* **T15.2 — Calculer la charge de télémétrie**
+* **T15.3 — Estimer le débit de données**
+* **T15.4 — Concevoir une solution de traitement temps réel**
+* **T15.5 — Tester ou valider la performance théorique**
+
+### Livrables attendus
+
+* Analyse de la contrainte de latence.
+* Calcul de la charge générée par les 10 000 véhicules.
+* Estimation du débit de données.
+* Proposition d'une solution de traitement presque en temps réel.
+* Résultats de test, d'expérimentation ou de validation théorique.
+
+Les principaux volumes considérés sont :
+
+* **2 000 messages/seconde**
+* **120 000 messages/minute**
+* **7 200 000 messages/heure**
+* **172 800 000 messages/jour**
+
+---
+
+
+
+
+
+
+
+
