@@ -22,6 +22,4 @@ GeoTrack utilise une stratégie de journalisation et de monitoring permettant de
 
 L’architecture orientée événements facilite l’évolution du système. Les différents services peuvent être mis à jour et déployés indépendamment. La mise à l’échelle horizontale permet également d’ajouter des ressources lorsque le nombre de véhicules augmente.
 
-## Conclusion
 
-La stratégie de validation proposée permet de vérifier que GeoTrack reste performant, disponible, sécurisé et résilient malgré les fortes charges ou les défaillances de certains composants.
