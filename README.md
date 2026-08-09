@@ -43,4 +43,4 @@ Les documents et livrables sont ajoutés progressivement avec des commits régul
 * registre des risques ;
 * historique des commits Git ;
 * documentation de la stratégie de branches ;
-* bilan des contributions individuelles de l'équipe.
+
