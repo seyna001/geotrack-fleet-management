@@ -4,9 +4,9 @@ GeoTrack - Système de suivi de flotte de véhicules
 Lien du projet Jira : https://dios84.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog
 
 
-## Organisation du dépôt
+## Organisation du dépôt avec les differentes branches
 
-- `volet-1-pilotage-agile` : Jira, Sprints
-- `volet-2-analyse-conception` :  Analyse, conception logicielle et architecture système
-- `volet-3-architecture` : Validation de la qualité 
+- `volet-1` : Jira, Sprints
+- `volet-2-` :  Analyse, conception logicielle et architecture système
+- `volet-3-` : Validation de la qualité 
 
