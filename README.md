@@ -95,7 +95,7 @@ Les choix technologiques et architecturaux sont reliés aux exigences du projet 
 
 Interface utilisateur
 
-Une maquette haute fidélité est réalisée avec Figma afin de représenter le parcours utilisateur principal.
+Une maquette  est réalisée  afin de représenter le parcours utilisateur principal.
 
 Le prototype comprend plusieurs écrans principaux permettant notamment de visualiser et de superviser les informations de la flotte de véhicules.
 
