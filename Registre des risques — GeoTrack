@@ -31,10 +31,6 @@ L'évaluation utilise trois niveaux :
 
 ## R01 — Surcharge du système
 
-**Catégorie :** Technique
-**Probabilité :** Élevée
-**Impact :** Élevé
-**Niveau :** Critique
 
 ### Description
 
@@ -55,10 +51,7 @@ Prévoir une architecture distribuée et scalable permettant la mise à l'échel
 
 ## R02 — Perte de messages de télémétrie
 
-**Catégorie :** Technique
-**Probabilité :** Moyenne
-**Impact :** Élevé
-**Niveau :** Élevé
+
 
 ### Description
 
@@ -79,10 +72,6 @@ Utiliser un mécanisme de messagerie fiable avec mise en file d'attente, persist
 
 ## R03 — Retard dans les tâches
 
-**Catégorie :** Organisationnel
-**Probabilité :** Moyenne
-**Impact :** Moyen
-**Niveau :** Moyen
 
 ### Description
 
@@ -102,10 +91,6 @@ Suivre régulièrement les billets Jira, identifier rapidement les tâches bloqu
 
 ## R04 — Mauvaise coordination de l'équipe
 
-**Catégorie :** Humain
-**Probabilité :** Moyenne
-**Impact :** Élevé
-**Niveau :** Élevé
 
 ### Description
 
@@ -126,10 +111,6 @@ Utiliser Jira pour l'assignation des tâches, organiser des points de suivi et u
 
 ## R05 — Latence trop importante
 
-**Catégorie :** Lié aux exigences — Performance
-**Probabilité :** Moyenne
-**Impact :** Élevé
-**Niveau :** Élevé
 
 ### Description
 
@@ -149,10 +130,6 @@ Utiliser un traitement asynchrone presque en temps réel, limiter les traitement
 
 ## R06 — Capacité de stockage insuffisante
 
-**Catégorie :** Lié aux exigences — Stockage
-**Probabilité :** Élevée
-**Impact :** Élevé
-**Niveau :** Critique
 
 ### Description
 
@@ -173,10 +150,6 @@ Estimer la taille moyenne d'un message, calculer la volumétrie sur deux ans et 
 
 ## R07 — Indisponibilité du système
 
-**Catégorie :** Lié aux exigences — Disponibilité
-**Probabilité :** Moyenne
-**Impact :** Élevé
-**Niveau :** Élevé
 
 ### Description
 
@@ -197,10 +170,6 @@ Prévoir plusieurs instances pour les composants critiques, la réplication des 
 
 ## R08 — Fausses détections de geofencing
 
-**Catégorie :** Lié au sujet — Geofencing
-**Probabilité :** Moyenne
-**Impact :** Moyen
-**Niveau :** Moyen
 
 ### Description
 
@@ -219,8 +188,3 @@ Utiliser une marge de tolérance autour des limites des zones et, lorsque néces
 
 ---
 
-# Suivi des risques
-
-Le registre des risques doit être réévalué au cours des deux Sprints. Les risques peuvent évoluer selon l'avancement du projet et les résultats des analyses, expérimentations et tests.
-
-Les risques critiques ou élevés doivent être suivis en priorité et les mesures de mitigation doivent être prises en compte dans les choix d'architecture de GeoTrack.
