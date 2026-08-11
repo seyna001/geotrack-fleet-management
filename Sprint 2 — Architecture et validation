@@ -28,90 +28,55 @@ US12 — Conserver les données de télémétrie pendant deux ans
 Epic — Disponibilité et résilience
 US13 — Assurer la haute disponibilité 24/7
 US14 — Assurer la tolérance aux pannes
+
+
 Tâches
 US05 — Alerte de dépassement de vitesse
 T5.1 — Définir les règles de détection des excès de vitesse
 T5.2 — Concevoir le mécanisme de génération des alertes
 T5.3 — Modéliser le flux d'une alerte de vitesse
 T5.4 — Valider le fonctionnement des alertes de vitesse
-Livrables attendus
-Règles de détection des dépassements.
-Description du mécanisme d'alerte.
-Diagramme de séquence de l'alerte de vitesse.
-Résultats de validation.
+
 US06 — Créer et gérer des zones géographiques
 T6.1 — Définir le modèle d'une zone géographique
 T6.2 — Concevoir la création d'une zone géographique
 T6.3 — Concevoir la modification et la suppression des zones
 T6.4 — Modéliser la gestion des zones géographiques
-Livrables attendus
-Modèle d'une zone géographique.
-Documentation du fonctionnement du geofencing.
-Modélisation de la création, modification et suppression des zones.
+
 US07 — Détecter l'entrée ou la sortie d'une zone
 T7.1 — Analyser le mécanisme de détection entrée/sortie
 T7.2 — Définir les événements de geofencing
 T7.3 — Concevoir le traitement du geofencing
 T7.4 — Réaliser le diagramme de séquence du geofencing
 T7.5 — Valider la détection entrée/sortie
-Livrables attendus
-Analyse du mécanisme de détection.
-Définition des événements d'entrée et de sortie.
-Description du traitement du geofencing.
-Diagramme de séquence.
-Résultats de validation.
+
 US08 — Consulter l'historique des trajets
 T8.1 — Identifier les données nécessaires à l'historique
 T8.2 — Concevoir le stockage de l'historique des trajets
 T8.3 — Concevoir la reconstruction d'un trajet
 T8.4 — Modéliser la consultation de l'historique
-Livrables attendus
-Liste des données nécessaires.
-Proposition d'organisation des données historiques.
-Description du mécanisme de reconstruction des trajets.
-Diagramme de consultation de l'historique.
+
 US12 — Conserver les données pendant deux ans
 T12.1 — Calculer le volume de télémétrie sur deux ans
 T12.2 — Estimer l'espace de stockage nécessaire
 T12.3 — Définir la stratégie de stockage
 T12.4 — Définir la politique de rétention des données
 T12.5 — Documenter la solution de stockage
-Livrables attendus
-Calcul du nombre de messages générés.
-Estimation du volume de stockage.
-Stratégie de stockage.
-Politique de rétention.
-Documentation de la solution retenue.
 
-Avec 10 000 véhicules transmettant toutes les 5 secondes :
 
-2 000 messages/seconde
-172 800 000 messages/jour
-63 072 000 000 messages/an
-126 144 000 000 messages sur deux ans
 US13 — Assurer la haute disponibilité 24/7
 T13.1 — Identifier les composants critiques de GeoTrack
 T13.2 — Identifier les points uniques de défaillance
 T13.3 — Définir les mécanismes de redondance
 T13.4 — Concevoir l'architecture haute disponibilité
 T13.5 — Valider le scénario de haute disponibilité
-Livrables attendus
-Liste des composants critiques.
-Analyse des points uniques de défaillance.
-Description des mécanismes de redondance.
-Diagramme d'architecture haute disponibilité.
-Résultats de validation.
+
 US14 — Assurer la tolérance aux pannes
 T14.1 — Identifier les scénarios de panne
 T14.2 — Définir la gestion des messages en cas de panne
 T14.3 — Définir les mécanismes de reprise
 T14.4 — Modéliser la tolérance aux pannes
 T14.5 — Tester ou simuler un scénario de panne
-Livrables attendus
-Liste des principaux scénarios de panne.
-Stratégie de conservation des messages pendant une défaillance.
-Mécanismes de reprise et de basculement.
-Modélisation de la tolérance aux pannes.
-Résultats de la simulation ou du test.
+
 
 
