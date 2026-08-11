@@ -48,12 +48,7 @@ Le Sprint vise également à analyser les contraintes de performance imposées p
 * **T1.3 — Modéliser le flux de réception GPS**
 * **T1.4 — Documenter la réception des positions GPS**
 
-### Livrables attendus
 
-* Documentation des données GPS.
-* Structure proposée d'un message GPS.
-* Diagramme représentant le flux de réception GPS.
-* Documentation du fonctionnement de la réception des positions.
 
 ---
 
@@ -65,17 +60,6 @@ Le Sprint vise également à analyser les contraintes de performance imposées p
 * **T2.4 — Calculer le débit de messages**
 * **T2.5 — Documenter le traitement de la télémétrie**
 
-### Livrables attendus
-
-* Liste des données de télémétrie.
-* Structure proposée du message de télémétrie.
-* Hypothèse justifiée concernant la taille moyenne d'un message.
-* Calcul de la charge générée par la flotte.
-* Documentation du traitement des données.
-
-Avec 10 000 véhicules transmettant toutes les 5 secondes, le débit moyen à considérer est :
-
-**10 000 ÷ 5 = 2 000 messages par seconde.**
 
 ---
 
@@ -87,13 +71,6 @@ Avec 10 000 véhicules transmettant toutes les 5 secondes, le débit moyen à co
 * **T3.4 — Réaliser le diagramme de séquence du suivi temps réel**
 * **T3.5 — Valider les critères d'affichage**
 
-### Livrables attendus
-
-* Description des besoins de l'affichage cartographique.
-* Maquette de l'interface.
-* Documentation du mécanisme de mise à jour des positions.
-* Diagramme de séquence du suivi en temps réel.
-* Résultat de la validation des critères d'acceptation.
 
 ---
 
@@ -104,12 +81,7 @@ Avec 10 000 véhicules transmettant toutes les 5 secondes, le débit moyen à co
 * **T4.3 — Modéliser la récupération des informations**
 * **T4.4 — Valider la vue détaillée**
 
-### Livrables attendus
 
-* Liste des informations du véhicule.
-* Maquette de la vue détaillée.
-* Modélisation de la récupération des dernières données.
-* Résultat de la validation de la vue.
 
 Les informations considérées comprennent notamment la position GPS, la vitesse, la direction, l'état du véhicule, les informations de diagnostic et l'heure de la dernière télémétrie reçue.
 
@@ -123,20 +95,6 @@ Les informations considérées comprennent notamment la position GPS, la vitesse
 * **T15.4 — Concevoir une solution de traitement temps réel**
 * **T15.5 — Tester ou valider la performance théorique**
 
-### Livrables attendus
-
-* Analyse de la contrainte de latence.
-* Calcul de la charge générée par les 10 000 véhicules.
-* Estimation du débit de données.
-* Proposition d'une solution de traitement presque en temps réel.
-* Résultats de test, d'expérimentation ou de validation théorique.
-
-Les principaux volumes considérés sont :
-
-* **2 000 messages/seconde**
-* **120 000 messages/minute**
-* **7 200 000 messages/heure**
-* **172 800 000 messages/jour**
 
 ---
 
