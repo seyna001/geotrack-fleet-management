@@ -113,18 +113,5 @@ Stratégie de conservation des messages pendant une défaillance.
 Mécanismes de reprise et de basculement.
 Modélisation de la tolérance aux pannes.
 Résultats de la simulation ou du test.
-Assignation
 
-Les User Stories et les tâches associées sont assignées aux différents membres de l'équipe directement dans Jira.
-
-Chaque membre doit :
-
-être responsable de plusieurs billets Jira ;
-faire évoluer régulièrement ses billets ;
-documenter les actions réalisées ;
-ajouter des commentaires utiles sur l'avancement ;
-joindre ou référencer les livrables produits ;
-contribuer au dépôt Git avec son propre compte.
-
-La répartition doit permettre de démontrer une contribution active de chaque membre pendant toute la durée du Sprint.
 
